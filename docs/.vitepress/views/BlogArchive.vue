@@ -54,19 +54,13 @@ const { frontmatter: pageData, theme } = useData();
 const { hero, types, features, flow } = pageData.value;
 
 // 根据当前 page 名称获取 sidebar 数据并构造相应的类别
-
-var pathname = '';
-if (typeof window !== 'undefined') {
-    pathname = window.location.pathname;
-}
-
-
+const pathname = window.location.pathname;
 const sidebarData = theme.value.sidebar?.[pathname];
 const categories =
   types || sidebarData?.items.map((item: any) => ({ name: item.text, link: item.link }));
 
 // 根据 url 获取推荐阅读文章信息
-const featuresPost = features.map((url: string) =>
-  posts.find((post) => post.url === url)
-);
+// const featuresPost = features.map((url: string) =>
+//   posts.find((post) => post.url === url)
+// );
 </script>
