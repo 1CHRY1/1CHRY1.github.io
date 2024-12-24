@@ -31,7 +31,7 @@
 
 ## 3. 结构
 
-![image-20241220165517405](C:\Users\22171\AppData\Roaming\Typora\typora-user-images\image-20241220165517405.png)
+![image-20241220165517405](./pic/framework.png)
 
 - node（每个Node都需要安装以下三个process）
   - container runtime(docker)
