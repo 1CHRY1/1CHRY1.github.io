@@ -65,7 +65,10 @@ const firstHalf = posts.slice(0, halfLength)
 const secondHalf = posts.slice(halfLength)
 
 // 根据当前 page 名称获取 sidebar 数据并构造相应的类别
-const pathname = window.location.pathname
+var pathname = '';
+if (typeof window !== 'undefined') {
+  pathname = window.location.pathname
+}
 const sidebarData = theme.value.sidebar?.[pathname]
 const categories =
   types || sidebarData?.items.map((item: any) => ({ name: item.text, link: item.link }))

@@ -40,7 +40,9 @@ const shortLink = computed(() => {
 });
 
 function openLink() {
-  window.open(friendsInfo.link, "_blank");
+  if (typeof window !== 'undefined') {
+    window.open(friendsInfo.link, "_blank");
+  }
 }
 </script>
 

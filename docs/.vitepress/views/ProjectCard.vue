@@ -53,6 +53,8 @@ const littleBadgeColor = computed(() => {
 });
 
 function openLink() {
-  window.open(projectsInfo.link, "_blank");
+  if (typeof window !== 'undefined') {
+    window.open(projectsInfo.link, "_blank");
+  }
 }
 </script>

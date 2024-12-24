@@ -15,6 +15,8 @@
 <script setup>
 const { desc, link, icon } = defineProps(["desc", "link", "icon"]);
 function openLink() {
-  window.open(link, "_blank");
+  if (typeof window !== 'undefined') {
+    window.open(link, "_blank");
+  }
 }
 </script>
