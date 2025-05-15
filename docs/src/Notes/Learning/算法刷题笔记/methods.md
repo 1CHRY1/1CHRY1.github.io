@@ -19,6 +19,8 @@ char[] c = s.toCharArray();
 `sb.append(c);`
 `return sb.toString();`
 
+`string.contains("ab")`判断是否为某字符串的子串
+
 ##### List
 
 `Arrays.sort` Array排序
@@ -29,11 +31,17 @@ char[] c = s.toCharArray();
 
 `Arrays.stream(nums).max().getAsInt()` 获取数组最大值
 
+`Collection.reverse(list)` List反转
+
 ##### Map
 
 `map.getOrDefault ` 获取map中key对应的value，如果不存在则返回默认值
 `map.size()` 获取map的长度
 `map.clear()` 清除map内容
+
+遍历map的key
+`for(String key : map.keySet())`
+`for(Map.Entry<Object,Object> entry : map.entrySet())` `entry.getKey()` `entry.getValue()`
 
 ##### 类型转换
 
@@ -52,21 +60,30 @@ char[] c = s.toCharArray();
 
 `Float/Integer.MIN(MAX)_VALUE` 获取数值无限小
 
-##### 队列
 
-`优先队列`：
+##### 栈与队列
+
+`Deque<Object>` 栈
+`ArrayDeque<Object>();` 声明双端队列
+操作：`stack.push()`,`stack.pop()`,`stack.peek()`,`stack.isEmpty()`
+
+`Queue<Object>` 队列
+`LinkedList<>();` 声明队列（链表形式）
+操作：`queue.offer()`,`queue.poll()`,`queue.peek()`,`queue.isEmpty()`   
+
+`优先队列(小顶堆的实现)`：
 ```java
 
-// 初始化队列
-PriorityQueue<int[]> pq = new PriorityQueue<int[]>(new Comparator<int[]>() {
-    public int compare(int[] pair1, i[] pair2) {
-        return pair1[0] != pair2[0] pair2[0] - pair1[0] : pair2[1] pair1[1];
-    }
-});
+// 写法1 推荐这个吧
+PriorityQueue<int[]> queue = new PriorityQueue<>((m, n) -> m[1] - n[1]);
 
-// 添加元素
-for (int i = 0; i < k; ++i) {
-    pq.offer(new int[]{nums[i], i});
-}
+// 写法2
+PriorityQueue<int[]> queue = new PriorityQueue<int[]>(
+    new Comparator<int[]>() {
+        public int compare(int[] m, int[] n) {
+            return m[1] - n[1];
+        }
+    });
+
 ```
 
