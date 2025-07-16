@@ -33,6 +33,8 @@ char[] c = s.toCharArray();
 
 `Collection.reverse(list)` List反转
 
+`list1.equals(list2)` 判断List相等
+
 ##### Map
 
 `map.getOrDefault ` 获取map中key对应的value，如果不存在则返回默认值
