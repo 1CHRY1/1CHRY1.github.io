@@ -27,13 +27,15 @@ char[] c = s.toCharArray();
 `Array.asList(num1, num2, num3)` 生成一个List
 `Arrays.copyOfRange(arr, start, end)` Array截取子列
 
+`Arrays.fill(array, 1)` 将数组中填满1
+
 `listName.sort(null)` List排序
 
 `Arrays.stream(nums).max().getAsInt()` 获取数组最大值
 
 `Collection.reverse(list)` List反转
 
-`list1.equals(list2)` 判断List相等
+`Collection.nCopies(size, 1)` 创建一个全是1的数组
 
 ##### Map
 
