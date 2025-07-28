@@ -542,11 +542,11 @@ public class LRUCache<K, V> {
 
     public LRUCache(int capacity) {
         this.capacity = capacity;
-        map = new HashMap<>(capacity);
-        head = new Node<>();
-        tail = new Node<>();
-        head.next = tail;
-        tail.prev = head;
+        this.map = new HashMap<>(capacity);
+        this.head = new Node<>();
+        this.tail = new Node<>();
+        this.head.next = tail;
+        this.tail.prev = head;
     }
 
     public V get(K key) {
@@ -1388,7 +1388,7 @@ CompletableFuture.supplyAsync(() -> "result", executor);
 
 #### 💡 线程池是什么？工作原理是什么？
 
-线程池是一种池化技术，用于预先创建并管理一组线程，避免频繁色列建和销毁线程的开销，提高性能和响应速度。
+线程池是一种池化技术，用于预先创建并管理一组线程，避免频繁创建和销毁线程的开销，提高性能和响应速度。
 
 它几个关键的配置包括：`核心线程数`、`最大线程数`、`空闲存活时间`、`工作队列`、`拒绝策略`。
 
