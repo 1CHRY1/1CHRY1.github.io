@@ -21,6 +21,8 @@ char[] c = s.toCharArray();
 
 `string.contains("ab")`判断是否为某字符串的子串
 
+`Character.isLetterOrDigit(a)`判断a是否为数字或字符串
+
 ##### List
 
 `Arrays.sort` Array排序
@@ -36,6 +38,8 @@ char[] c = s.toCharArray();
 `Collection.reverse(list)` List反转
 
 `Collection.nCopies(size, 1)` 创建一个全是1的数组
+
+`result.toArray(new int[result.size()][])` 将List转换为int数组
 
 ##### Map
 
